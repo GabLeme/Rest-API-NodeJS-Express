@@ -25,6 +25,8 @@ router.get('/', (req, res) => res.json({ message: 'Working' }));
 app.use('/', router);
 
 app.listen(port);
+
+console.log('foi');
 	
 function execSQLQuery(sqlQry, res){
     global.conn.request()
