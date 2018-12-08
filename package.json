@@ -1,7 +1,7 @@
 {
     "name": "casadocodigo",
         "version": "1.0.0",
-            "private": true; // Esta aplicação é privada, portanto não precisa de repositório
+            "private": true,
     "description": "site da casa do código",
         "main": "ApiREST.js",
             "author": "AUTOR",
