@@ -12,7 +12,7 @@ const connStr = 'Server=tcp:projeto321.database.windows.net,1433;database=dbproj
 // });
 
 sql.connect(connStr)
-   .then(conn => global.conn = conn)
+   .then(conn => GLOBAL.conn = conn)
    .catch(err => console.log(err));
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -27,7 +27,7 @@ app.listen(port);
 console.log('foi' + port);
 	
 function execSQLQuery(sqlQry, res){
-    global.conn.request()
+    GLOBAL.conn.request()
                .query(sqlQry)
                .then(result => res.json(result.recordset))
                .catch(err => res.json(err));
