@@ -31,6 +31,7 @@ function execSQLQuery(sqlQry, res){
                .query(sqlQry)
                .then(result => res.json(result.recordset))
                .catch(err => res.json(err));
+			   console.log(request() + " tnc");
 }
 
 router.get('/usuario/login/:param1/:param2', (req, res) =>{
