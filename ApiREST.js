@@ -4,12 +4,12 @@ const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
 const sql = require('mssql');
 const connStr = 'Server=tcp:projeto321.database.windows.net,1433;database=dbprojeto;User ID=projeto321;Password=Faculdadebandtec2018;encrypt=true;trustServerCertificate=true;hostNameInCertificate=projeto321.database.windows.net;loginTimeout=30';
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
-//   next();
-// });
+app.use(function(req, res, next) {
+   res.header("Access-Control-Allow-Origin", "*");
+   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+   next();
+});
 
 sql.connect(connStr)
    .then(conn => GLOBAL.conn = conn)
