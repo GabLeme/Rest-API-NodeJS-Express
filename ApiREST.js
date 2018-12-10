@@ -2,7 +2,7 @@ require('dotenv-safe').load();
 const express = require('express');
 const app = express();         
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 3000;
+const port = process.env.POR;
 const sql = require('mssql');
 const connStr = process.env.sqlConnection;
 
